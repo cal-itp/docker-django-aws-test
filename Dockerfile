@@ -12,3 +12,5 @@ RUN python -m pip install --upgrade pip && \
 
 COPY manage.py manage.py
 COPY app/ app/
+
+ENTRYPOINT ["python", "manage.py" "runserver" "0:8080"]
