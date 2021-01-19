@@ -1,7 +1,7 @@
 FROM python:3.8
 ENV PYTHONUNBUFFERED 1
 
-EXPOSE 8080
+EXPOSE 80
 
 WORKDIR /usr/src/django
 
@@ -13,4 +13,4 @@ RUN python -m pip install --upgrade pip && \
 COPY manage.py manage.py
 COPY app/ app/
 
-ENTRYPOINT ["python", "manage.py" "runserver" "0:8080"]
+ENTRYPOINT ["python", "manage.py" "runserver" "0:80"]
