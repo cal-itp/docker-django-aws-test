@@ -47,7 +47,7 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: ./aws/ecs-task-definition.json
+          task-definition: .aws/ecs-task-definition.json
           container-name: cal-itp-test
           image: ${{ steps.build-image.outputs.image }}
 
